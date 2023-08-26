@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <h1>AI generator upon click</h1>\
+
+    <!--change to upon click later-->
+    <form method="POST" action="/generate_response">
+        <label for="user_input">Enter your input:</label>
+        <input type="text" id="user_input" name="user_input">
+        <input type="submit" value="Generate Response">
+    </form>
+    
+    {% if user_input %}
+    <h3>Your Input:</h3>
+    <p>{{ user_input }}</p>
+    {% endif %}
+    
+    {% if response %}
+    <h3>AI Response:</h3>
+    <p>{{ response }}</p>
+    {% endif %}
+
+</body>
+</html>
