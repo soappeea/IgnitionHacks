@@ -11,11 +11,11 @@
 
 body
 {
-    background-color: #e8cfc1;
+    background-color: #ffede3;
 }
 .mainheader
 {
-    background-color: #e8cfc1;
+    background-color: #ffede3;
     float: left;
     width: 50%;
 }
@@ -43,13 +43,13 @@ body
 }
 
 /*showing response, change format and look*/
-/* #response {
+#responses {
     text-align: left;
     width: 800px;
-    border: solid white 1px;
+    border: solid #ac7b5d 1px;
     margin: 20px auto;
     padding: 20px;
-    background: white;
+    background: #dbb096;
     color: black;
     border-radius: 20px;
-} */
+} 

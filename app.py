@@ -29,12 +29,20 @@ def generate_response():
     return render_template("index.html", user_input=user_input, response=response)
 
 def generate_ai_response(user_input):
-    response = openai.Completion.create(
-        engine="text-davinci-003",
-        prompt=user_input,
-        max_tokens=100,
-    )
-    
+    if user_input == "Academic":
+        response = openai.Completion.create(
+            engine="text-davinci-003",
+            prompt="give advice on how to deal with academic stress",
+            max_tokens=100, 
+        )
+    elif user_input == "Personal":
+        response = openai.Completion.create(
+            engine="text-davinci-003",
+            prompt="give advice on how to deal with personal stress",
+            max_tokens=100,
+        )
+    else:
+        return "N/A."
     return response.choices[0].text
 
 @app.route('/static/<path:filename>')

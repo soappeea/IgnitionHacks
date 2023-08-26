@@ -20,17 +20,26 @@
         <img class="brainpic" src="/static/brain4.jpg"/>
     </div>
     
+    
     <!--testing purposes-->
     <body>
-        <h1>AI generator upon click</h1>\
+        <h1>Mental Health Button(change to click later)</h1>\
     
         <!--change to upon click later-->
         <form method="POST" action="/generate_response">
             <label for="user_input">Enter your input:</label>
-            <input type="text" id="user_input" name="user_input">
-            <input type="submit" value="Generate Response">
+            <button type="submit" id="user_input" name="user_input" value="Academic">Academic Advice</button>
+            <button type="submit" id="user_input" name="user_input" value="Personal">Personal Advice</button>
+            <!--below is for search method-->
+            <!-- <input type="text" id="user_input" name="user_input">
+            <input type="submit" value="Generate Response"> -->
         </form>
-        
+
+    
+    </body>
+
+    <div id="responses">
+        <p>Incoming advice..</p>        
         {% if user_input %}
         <h3>Your Input:</h3>
         <p>{{ user_input }}</p>
@@ -40,9 +49,7 @@
         <h3>AI Response:</h3>
         <p>{{ response }}</p>
         {% endif %}
-    
-    </body>
-        
+    </div>
    
 </body>
 </html>
