@@ -37,5 +37,9 @@ def generate_ai_response(user_input):
     
     return response.choices[0].text
 
+@app.route('/static/<path:filename>')
+def serve_static(filename):
+    return app.send_static_file(filename)
+
 if __name__ == "__main__":
     app.run(debug=True)

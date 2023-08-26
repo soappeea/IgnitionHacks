@@ -1,0 +1,55 @@
+/* .mainheader
+{
+    background-color: rgb(209, 133, 33);
+}
+.mainTitle
+{
+    color: #3625a7;
+   
+}
+ */
+
+body
+{
+    background-color: #e8cfc1;
+}
+.mainheader
+{
+    background-color: #e8cfc1;
+    float: left;
+    width: 50%;
+}
+.mainTitle
+{
+    color: #523e27;
+    font-family:'Times New Roman', Times, serif;
+    text-align: Left;
+    margin: 40px;
+    font-size: 50px;
+}
+.brainpic
+{
+   float: right;
+   width: 100%;
+   opacity: 94%;
+   height: 600px;
+}
+.button
+{
+    font-size: 15px;
+    text-align: center;
+    width: 150px;
+    height: 30px;
+}
+
+/*showing response, change format and look*/
+/* #response {
+    text-align: left;
+    width: 800px;
+    border: solid white 1px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    color: black;
+    border-radius: 20px;
+} */
