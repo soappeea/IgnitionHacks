@@ -2,6 +2,14 @@ body
 {
     background-color: #ffede3;
 }
+section:hover
+{
+    animation: fadeIn 3.5s;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
 .mainheader
 {
     background-color: #ffede3;
@@ -17,6 +25,19 @@ body
     margin: 40px;
     font-size: 50px;
 }
+.logo
+{
+    position: relative;
+    width: 100px;
+}
+.logotext
+{
+    position: relative;
+    top:-40px; 
+    left:22px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #7d6243;
+}
 .brainpic
 {
    float: right;
@@ -30,11 +51,13 @@ body
     text-align: center;
     width: 150px;
     height: 30px;
+    border-radius: 13px;
 }
 .button:hover
 {
-    background-color: #523e27;
-    color:#e8cfc1;
+    background-color: #dbb096;
+    border-color: #dbb096;
+    color: #523e27;
 }
 .page2
 {
@@ -97,7 +120,7 @@ body
 {
     font-size: 50px;
    position: relative;
-   top: -10px;
+   top: -70px;
    right: 20px;
 }
 .aibutton
@@ -106,9 +129,15 @@ body
     border-color: #dbb096;
     color: #523e27;
     border-radius: 20px;
-    font-size: 30px;
-    width: 25%;
+    font-size: 20px;
+    width: 20%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.aibutton:hover
+{
+    background-color: #523e27;
+    border-color: #523e27;
+    color: #dbb096;
 }
 
 
