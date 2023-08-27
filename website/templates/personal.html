@@ -18,14 +18,11 @@
         </form>
 
         <div id="responses">
-            <p>Incoming advice..</p>        
             {% if user_input %}
-            <h3>Your Input:</h3>
-            <p>{{ user_input }}</p>
+            <h3>{{ user_input }} :</h3>
             {% endif %}
             
             {% if response %}
-            <h3>AI Response:</h3>
             <p>{{ response }}</p>
             {% endif %}
         </div>

@@ -27,23 +27,20 @@ def index():
 @app.route("/generate_response", methods=["POST"])
 def generate_response():
     user_input = request.form["user_input"]
-    page = "index.html"
-
-    #maybe use switch statement instead?
-    if user_input == "Study Habits" or "Academic Pressure" or "Failure":
-        page = "academic.html"
-    elif user_input == "Communication":
-        page = "family.html"
-    elif user_input == "Self-Esteem" or "Body Image" or "Identity":
-        page = "personal.html"
-    elif user_input == "Friendship" or "Peer Pressure" or "Loneliness":
-        page = "social.html"
-    else:
-        return "N/A."
-    #if value is one of the 4 topics, then page = *html*
 
     #Use OpenAI to generate a response
     response = generate_ai_response(user_input)
+
+    if user_input in ["Study Habits", "Academic Pressure", "Failure"]:
+        page = "academic.html"
+    elif user_input == "Communication":
+        page = "family.html"
+    elif user_input in ["Self-Esteem", "Body Image", "Identity"]:
+        page = "personal.html"
+    elif user_input in ["Friendships", "Peer Pressure", "Loneliness"]:
+        page = "social.html"
+    else:
+        return "N/A."
 
     return render_template(page, user_input=user_input, response=response)
 
@@ -90,7 +87,7 @@ def generate_ai_response(user_input):
             prompt="give advice on dealing with personal stress and identity",
             max_tokens=100,
         )
-    elif user_input == "Friendship":
+    elif user_input == "Friendships":
         response = openai.Completion.create(
             engine="text-davinci-003",
             prompt="give advice on dealing with social stress and friendships",
