@@ -91,26 +91,24 @@ body
     font-size: 20px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 700px;
-}
-.odd
-{
-    background-color: #523e27;
-    color: #e8cfc1;
-}
-.even
-{
     color: #523e27;
 }
 .subHead
 {
     font-size: 50px;
    position: relative;
-   top: 50px;
+   top: -10px;
    right: 20px;
 }
-Back button 
+.aibutton
 {
-    
+    background-color: #dbb096;
+    border-color: #dbb096;
+    color: #523e27;
+    border-radius: 20px;
+    font-size: 30px;
+    width: 25%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
