@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+    <div class="subs odd">
+        <h1 class="subHead" id="per">Personal Advice</h1>
+        <p style="position:relative; top:60px;">Balancing academics, personal, social, family and other life aspects can be very stressful. Let's learn how to handle academic stress. </p>
+        <p style="position:relative; top: 70px;">Press the button below to see tips on handling personal stress:</p>
+        <form method="POST" action="/generate_response">
+            <button type="submit" id="user_input" name="user_input" value="Self-Esteem">Self-Esteem</button>
+            <button type="submit" id="user_input" name="user_input" value="Body Image">Body Image</button>
+            <button type="submit" id="user_input" name="user_input" value="Identity">Identity</button>
+        </form>
+
+        <div id="responses">
+            <p>Incoming advice..</p>        
+            {% if user_input %}
+            <h3>Your Input:</h3>
+            <p>{{ user_input }}</p>
+            {% endif %}
+            
+            {% if response %}
+            <h3>AI Response:</h3>
+            <p>{{ response }}</p>
+            {% endif %}
+        </div>
+
+        <a href="/"><button class = "Back button" style="margin-left: -3px;"type="button">Back</button></a>
+    </div>
+</body>
+</html>
