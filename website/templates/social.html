@@ -17,15 +17,12 @@
             <button type="submit" id="user_input" name="user_input" value="Loneliness">Loneliness</button>
         </form>
 
-        <div id="responses">
-            <p>Incoming advice..</p>        
+        <div id="responses">     
             {% if user_input %}
-            <h3>Your Input:</h3>
-            <p>{{ user_input }}</p>
+            <h3>{{ user_input }} :</h3>
             {% endif %}
             
             {% if response %}
-            <h3>AI Response:</h3>
             <p>{{ response }}</p>
             {% endif %}
         </div>
